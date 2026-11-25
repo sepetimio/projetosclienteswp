@@ -19,8 +19,9 @@
 html{background:#120d09}
 body{font-family:M,system-ui,sans-serif;font-weight:600;color:var(--creme);min-height:100vh;-webkit-font-smoothing:antialiased;padding-bottom:110px;
  background:radial-gradient(ellipse 90% 35% at 15% 0%,#3a2617,transparent 70%),#120d09}
-.grao{position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.9;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='w'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 .92  0 0 0 0 .8  0 0 0 .2 -.08'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23w)'/%3E%3C/svg%3E");background-size:300px}
+.grao{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.9;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='w'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 .92  0 0 0 0 .8  0 0 0 .2 -.08'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23w)'/%3E%3C/svg%3E");background-size:300px}
 .wrap{max-width:640px;margin:0 auto;padding:0 18px}
+main.wrap{position:relative;z-index:1}
 /* topo */
 .topo{padding:30px 0 6px;display:flex;align-items:flex-end;justify-content:space-between;gap:14px}
 .topo img{height:40px;display:block}
@@ -40,9 +41,9 @@ h1 span{color:var(--cobre)}
 .dlabel span{display:block;font-family:A;font-weight:400;font-size:38px;line-height:1;margin-top:2px}
 .dlabel i{display:block;font-style:normal;font-weight:800;font-size:9.5px;letter-spacing:2px;color:var(--muted);margin-top:3px}
 .tiles{display:flex;flex-direction:column;gap:10px;min-width:0}
-.tile{position:relative;display:flex;align-items:center;gap:12px;padding:12px 12px 12px 12px;border-radius:16px;background:rgba(243,232,210,.05);border:1px solid var(--linha);cursor:pointer;transition:background .15s,border-color .15s}
+.tile{position:relative;display:flex;align-items:center;gap:12px;padding:12px 12px 12px 12px;border-radius:16px;background:#1D1813;border:1px solid var(--linha);cursor:pointer;transition:background .15s,border-color .15s}
 .tile:active{transform:scale(.99)}
-.tile.sel{background:rgba(227,154,85,.13);border-color:var(--cobre)}
+.tile.sel{background:#2D1F13;border-color:var(--cobre)}
 .ic{flex:none;width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(227,154,85,.12)}
 .ic svg{width:26px;height:26px}
 .tx{min-width:0;flex:1}
@@ -55,7 +56,7 @@ h1 span{color:var(--cobre)}
 .ck svg{width:16px;height:16px;opacity:0}
 .tile.sel .ck svg{opacity:1}
 /* radar */
-.radar{margin-top:28px;padding:14px 16px;border-radius:16px;border:2px dashed rgba(227,154,85,.3)}
+.radar{margin-top:28px;padding:14px 16px;border-radius:16px;background:#16110C;border:2px dashed rgba(227,154,85,.3)}
 .radar b{font-family:A;font-weight:400;font-size:18px;text-transform:uppercase;color:var(--cobre)}
 .radar p{font-size:13px;line-height:1.45;color:var(--muted);margin-top:6px}
 .rod{text-align:center;font-size:10px;letter-spacing:2px;color:#7d6c55;margin-top:26px;line-height:1.8;text-transform:uppercase}
@@ -85,7 +86,7 @@ h1 span{color:var(--cobre)}
 .sh-btn{margin-top:20px;width:100%;font-family:M;font-weight:800;font-size:13px;letter-spacing:2px;text-transform:uppercase;padding:16px;border-radius:14px;cursor:pointer;border:1.5px solid var(--cobre);background:transparent;color:var(--cobre)}
 .sh-btn.sel{background:var(--cobre);color:var(--tinta)}
 .obs{margin-top:22px}
-.obs textarea{width:100%;min-height:70px;background:rgba(243,232,210,.05);border:1px solid var(--linha);border-radius:14px;color:var(--creme);font:600 14px/1.5 M,system-ui;padding:12px 14px;resize:vertical}
+.obs textarea{width:100%;min-height:70px;background:#1D1813;border:1px solid var(--linha);border-radius:14px;color:var(--creme);font:600 14px/1.5 M,system-ui;padding:12px 14px;resize:vertical}
 .obs textarea::placeholder{color:#7d6c55}
 .obs textarea:focus{outline:none;border-color:var(--cobre)}
 @media (max-width:380px){h1{font-size:54px}.tx h3{font-size:18px}.dia{grid-template-columns:54px 1fr}}
